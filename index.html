@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom scrollbar for a clean look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6b7280;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+
+        /* General styling for body and fonts */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #e5e7eb;
+        }
+
+        /* Smooth scroll effect for internal links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styling for the navigation bar */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(13, 17, 23, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the section titles */
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 70%;
+            height: 4px;
+            background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-[#0d1117] text-gray-200">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed top-0 w-full z-50 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo/Name -->
+            <a href="#home" class="text-xl font-bold text-sky-400">Gali Charan Tej</a>
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="hover:text-sky-400 transition duration-300">About</a></li>
+                <li><a href="#skills" class="hover:text-sky-400 transition duration-300">Skills</a></li>
+                <li><a href="#projects" class="hover:text-sky-400 transition duration-300">Projects</a></li>
+                <li><a href="#contact" class="hover:text-sky-400 transition duration-300">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <ul class="flex flex-col space-y-4 px-4 py-2 bg-gray-800 rounded-md">
+                <li><a href="#about" class="block py-2 hover:text-sky-400 transition duration-300">About</a></li>
+                <li><a href="#skills" class="block py-2 hover:text-sky-400 transition duration-300">Skills</a></li>
+                <li><a href="#projects" class="block py-2 hover:text-sky-400 transition duration-300">Projects</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-sky-400 transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 mt-16">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- Profile photo added here -->
+                <img src="https://raw.githubusercontent.com/charantej-11/profile_photo/main/profile%20photo.jpg" alt="Profile Picture of Charan Tej Gali" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover border-4 border-sky-400 shadow-lg">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white">Hello, I'm <span class="text-sky-400">Charan Tej G.</span></h1>
+                <p class="text-lg md:text-xl font-medium text-gray-400">A passionate Web Developer | UI/UX Designer | Freelancer</p>
+                <div class="flex flex-wrap justify-center gap-4 pt-4">
+                    <a href="#contact" class="bg-sky-500 hover:bg-sky-600 transition duration-300 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105">Hire Me</a>
+                    <a href="#" class="bg-gray-700 hover:bg-gray-600 transition duration-300 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105">Download CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 min-h-screen flex items-center">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-4xl font-bold section-title mb-8">About Me</h2>
+                    <p class="text-lg leading-relaxed text-gray-400 mb-4">
+                        Hello! I am Charan, a passionate and experienced web developer, building beautiful and functional websites and applications. My expertise lies in front-end development, where I love bringing creative ideas to life with clean and efficient code.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-400">
+                        I am dedicated to continuous learning and staying up-to-date with the latest industry trends. I thrive in collaborative environments and am always eager to take on new challenges. Let's build something amazing together!
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://placehold.co/500x500/1f2937/d1d5db?text=About+Image" alt="About Me" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl font-bold text-center section-title mb-12 mx-auto">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <!-- Skill Card -->
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
+                    <span class="text-lg font-medium text-gray-300">HTML5</span>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
+                    <span class="text-lg font-medium text-gray-300">CSS3</span>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <i class="fab fa-js-square text-4xl text-yellow-500 mb-4"></i>
+                    <span class="text-lg font-medium text-gray-300">JavaScript</span>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <i class="fab fa-react text-4xl text-sky-400 mb-4"></i>
+                    <span class="text-lg font-medium text-gray-300">React</span>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <i class="fab fa-node-js text-4xl text-green-500 mb-4"></i>
+                    <span class="text-lg font-medium text-gray-300">Node.js</span>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
+                    <span class="text-lg font-medium text-gray-300">c</span>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <i class="fab fa-bootstrap text-4xl text-purple-500 mb-4"></i>
+                    <span class="text-lg font-medium text-gray-300">C++</span>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <i class="fab fa-github text-4xl text-white mb-4"></i>
+                    <span class="text-lg font-medium text-gray-300">Git/GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center section-title mb-12 mx-auto">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Project Card 1 -->
+                <a href="https://github.com/charantej-11/Daily_Dairy_Delivery_App" target="_blank" rel="noopener noreferrer" class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+1" alt="Daily Dairy Delivery App" class="rounded-md mb-4">
+                    <h3 class="text-xl font-bold mb-2">Daily Dairy Delivery App</h3>
+                    <p class="text-gray-400 mb-4">
+                        A multi-role platform for ordering Dairy Products. It is a subscription based recurring delivery app created using React and Node.js. It features user authentication, a shopping cart.
+                    </p>
+                    <div class="flex space-x-2">
+                        <span class="bg-sky-500 text-xs px-2 py-1 rounded-full">HTML</span>
+                        <span class="bg-green-500 text-xs px-2 py-1 rounded-full">Node.js</span>
+                        <span class="bg-gray-600 text-xs px-2 py-1 rounded-full">CSS</span>
+                    </div>
+                </a>
+                <!-- Project Card 2 -->
+                <a href="https://github.com/charantej-11/Pothole_repair_machine" target="_blank" rel="noopener noreferrer" class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+2" alt="Pothole Repair Machine" class="rounded-md mb-4">
+                    <h3 class="text-xl font-bold mb-2">Pothole Repair Machine</h3>
+                    <p class="text-gray-400 mb-4">
+                        A prototype for an automated Pothole Repair Machine that detects and fills potholes using computer vision and robotics. This project showcases skills in robotics, AI, and embedded systems.
+                    </p>
+                    <div class="flex space-x-2">
+                        <span class="bg-yellow-500 text-xs px-2 py-1 rounded-full">C</span>
+                        <span class="bg-purple-500 text-xs px-2 py-1 rounded-full">Arduino UNO</span>
+                    </div>
+                </a>
+                <!-- Project Card 3 -->
+                <a href="https://github.com/charantej-11/Movie_ticket_booking_system" target="_blank" rel="noopener noreferrer" class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+3" alt="Movie Ticket Booking System" class="rounded-md mb-4">
+                    <h3 class="text-xl font-bold mb-2">Movie Ticket Booking System</h3>
+                    <p class="text-gray-400 mb-4">
+                        A modern blog platform optimized for mobile devices. It features dynamic content loading and a clean, minimalist design.
+                    </p>
+                    <div class="flex space-x-2">
+                        <span class="bg-sky-500 text-xs px-2 py-1 rounded-full">c</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 min-h-screen flex items-center">
+            <div class="max-w-3xl mx-auto text-center w-full">
+                <h2 class="text-4xl font-bold section-title mb-8 mx-auto">Get in Touch</h2>
+                <p class="text-lg text-gray-400 mb-8">
+                    Feel free to reach out to me for collaborations, projects, or just to say hello. I'm always happy to connect!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-8">
+                    <!-- Contact Form -->
+                    <form action="#" class="w-full md:w-1/2 p-6 bg-gray-800 rounded-lg shadow-lg">
+                        <div class="mb-4">
+                            <input type="text" placeholder="Your Name" class="w-full bg-gray-700 text-white p-3 rounded-md focus:ring-2 focus:ring-sky-400 focus:outline-none" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="Your Email" class="w-full bg-gray-700 text-white p-3 rounded-md focus:ring-2 focus:ring-sky-400 focus:outline-none" required>
+                        </div>
+                        <div class="mb-4">
+                            <textarea placeholder="Your Message" rows="4" class="w-full bg-gray-700 text-white p-3 rounded-md focus:ring-2 focus:ring-sky-400 focus:outline-none" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 rounded-md transition duration-300">Send Message</button>
+                    </form>
+                    <!-- Social Links -->
+                    <div class="w-full md:w-1/2 p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-center items-center">
+                        <div class="flex space-x-4 mb-4">
+                            <a href="#" class="text-2xl text-gray-400 hover:text-sky-400 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-2xl text-gray-400 hover:text-sky-400 transition duration-300"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-2xl text-gray-400 hover:text-sky-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <p class="text-lg text-gray-400 mb-2"><i class="fas fa-envelope mr-2 text-sky-400"></i>galicharantej@gmail.com</p>
+                        <p class="text-lg text-gray-400"><i class="fas fa-phone mr-2 text-sky-400"></i>+91 7981338737</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-center py-6">
+        <p class="text-sm text-gray-500">&copy; 2024 Charan Tej Gali. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
